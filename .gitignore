@@ -4,6 +4,8 @@
 # Godot-specific ignores
 .import/
 export.cfg
+.DS_Store
+.import
 export_credentials.cfg
 
 # Imported translations (automatically generated from CSV files)

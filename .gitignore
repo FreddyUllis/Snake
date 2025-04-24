@@ -6,6 +6,7 @@
 export.cfg
 .DS_Store
 .import
+.uid
 export_credentials.cfg
 
 # Imported translations (automatically generated from CSV files)

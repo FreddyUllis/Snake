@@ -1,0 +1,615 @@
+[gd_scene load_steps=12 format=3 uid="uid://b8ccw7ak6s6vi"]
+
+[ext_resource type="StyleBox" uid="uid://dcreqvle2cd0q" path="res://HUD/Resources/hud_panels.tres" id="1_7uq4e"]
+[ext_resource type="Theme" uid="uid://crdnqlcnh2hid" path="res://HUD/Resources/hud_labels.tres" id="2_5e13b"]
+[ext_resource type="Script" uid="uid://drdxb1d58fo4e" path="res://HUD/Scripts/speed_panel.gd" id="3_bb7pr"]
+[ext_resource type="Theme" uid="uid://c2nedfs4pr1x" path="res://HUD/Resources/hud_button.tres" id="3_gc1bt"]
+[ext_resource type="StyleBox" uid="uid://bad64lefcrxeo" path="res://HUD/Resources/hud_button_non_border.tres" id="4_14n6k"]
+[ext_resource type="StyleBox" uid="uid://dck1prqp24thb" path="res://HUD/Resources/hud_panels_clear.tres" id="5_14n6k"]
+[ext_resource type="Script" uid="uid://m52umiw60wll" path="res://HUD/Scripts/text_game_control.gd" id="6_dmgiy"]
+[ext_resource type="Theme" uid="uid://b13upl17wixou" path="res://HUD/Resources/hud_labels_v2.tres" id="6_muoup"]
+[ext_resource type="Script" uid="uid://cx77autj0b5o1" path="res://HUD/Scripts/menu_control.gd" id="8_ekr6q"]
+[ext_resource type="FontFile" uid="uid://cf8x2m6psvev5" path="res://HUD/Art/Fonts/Handjet-Regular.ttf" id="8_lx50x"]
+
+[sub_resource type="Theme" id="Theme_lx50x"]
+default_font = ExtResource("8_lx50x")
+default_font_size = 40
+OptionButton/font_sizes/font_size = 48
+OptionButton/fonts/font = ExtResource("8_lx50x")
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="ButtonAndLabelControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 800.0
+offset_right = 1200.0
+offset_bottom = 800.0
+metadata/_edit_group_ = true
+
+[node name="ButtonAndLabelPanel" type="Panel" parent="ButtonAndLabelControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_7uq4e")
+
+[node name="ScorePanel" type="Panel" parent="ButtonAndLabelControl/ButtonAndLabelPanel"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 192.0
+theme_override_styles/panel = ExtResource("1_7uq4e")
+metadata/_edit_group_ = true
+
+[node name="TextScoreControl" type="Control" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ScorePanel"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 160.0
+offset_bottom = 192.0
+metadata/_edit_group_ = true
+
+[node name="ScoreLabel" type="Label" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ScorePanel/TextScoreControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -27.5
+offset_right = 50.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5e13b")
+text = "Score:"
+
+[node name="NumScoreControl" type="Control" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ScorePanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -240.0
+offset_bottom = 192.0
+grow_horizontal = 0
+metadata/_edit_group_ = true
+
+[node name="NumScoreLabel" type="Label" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ScorePanel/NumScoreControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -27.0
+offset_right = 232.0
+offset_bottom = 28.0
+grow_vertical = 2
+theme = ExtResource("2_5e13b")
+text = "0"
+
+[node name="SpeedPanel" type="Panel" parent="ButtonAndLabelControl/ButtonAndLabelPanel"]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 400.0
+offset_bottom = 384.0
+theme_override_styles/panel = ExtResource("1_7uq4e")
+script = ExtResource("3_bb7pr")
+metadata/_edit_group_ = true
+
+[node name="SpeedLevelControl" type="Control" parent="ButtonAndLabelControl/ButtonAndLabelPanel/SpeedPanel"]
+anchors_preset = 0
+offset_right = 160.0
+offset_bottom = 192.0
+metadata/_edit_group_ = true
+
+[node name="SpeedLabel" type="Label" parent="ButtonAndLabelControl/ButtonAndLabelPanel/SpeedPanel/SpeedLevelControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5e13b")
+text = "Speed:"
+
+[node name="SpeedNameControl" type="Control" parent="ButtonAndLabelControl/ButtonAndLabelPanel/SpeedPanel"]
+anchors_preset = 0
+offset_left = 160.0
+offset_right = 400.0
+offset_bottom = 192.0
+metadata/_edit_group_ = true
+
+[node name="SpeedNameLabel" type="Label" parent="ButtonAndLabelControl/ButtonAndLabelPanel/SpeedPanel/SpeedNameControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+theme = ExtResource("2_5e13b")
+text = "Normal"
+
+[node name="ButtonPanel" type="Panel" parent="ButtonAndLabelControl/ButtonAndLabelPanel"]
+layout_mode = 0
+offset_top = 384.0
+offset_right = 400.0
+offset_bottom = 800.0
+theme_override_styles/panel = ExtResource("1_7uq4e")
+metadata/_edit_group_ = true
+
+[node name="ButtonStartControl" type="Control" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ButtonPanel"]
+anchors_preset = 0
+offset_right = 400.0
+offset_bottom = 128.0
+
+[node name="ButtonStart" type="Button" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ButtonPanel/ButtonStartControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -42.5
+offset_right = 64.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_gc1bt")
+theme_override_styles/focus = ExtResource("4_14n6k")
+text = "Start"
+
+[node name="ButtonPause" type="Button" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ButtonPanel/ButtonStartControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -42.5
+offset_right = 64.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_gc1bt")
+theme_override_styles/focus = ExtResource("4_14n6k")
+text = "Pause"
+
+[node name="ButtonMenuControl" type="Control" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ButtonPanel"]
+anchors_preset = 0
+offset_top = 128.0
+offset_right = 400.0
+offset_bottom = 256.0
+
+[node name="ButtonMenu" type="Button" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ButtonPanel/ButtonMenuControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -42.5
+offset_right = 64.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_gc1bt")
+theme_override_styles/focus = ExtResource("4_14n6k")
+text = "Menu"
+
+[node name="ButtonExitControl" type="Control" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ButtonPanel"]
+anchors_preset = 0
+offset_top = 288.0
+offset_right = 400.0
+offset_bottom = 416.0
+
+[node name="ButtonExit" type="Button" parent="ButtonAndLabelControl/ButtonAndLabelPanel/ButtonPanel/ButtonExitControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -45.0
+offset_right = 64.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_gc1bt")
+theme_override_styles/focus = ExtResource("4_14n6k")
+text = "Exit"
+
+[node name="GameControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 800.0
+offset_bottom = 800.0
+metadata/_edit_group_ = true
+
+[node name="GamePanel" type="Panel" parent="GameControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("5_14n6k")
+
+[node name="TextGameControl" type="Control" parent="GameControl/GamePanel"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_dmgiy")
+
+[node name="TextGameLabel" type="Label" parent="GameControl/GamePanel/TextGameControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -11.5
+offset_right = 42.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_muoup")
+text = "Press start to game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlinkTimer" type="Timer" parent="GameControl/GamePanel/TextGameControl"]
+wait_time = 0.55
+autostart = true
+
+[node name="MenuControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -600.0
+offset_right = 200.0
+offset_bottom = 800.0
+grow_horizontal = 2
+script = ExtResource("8_ekr6q")
+
+[node name="MenuControl" type="Control" parent="MenuControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -400.0
+offset_right = 200.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPanel" type="Panel" parent="MenuControl/MenuControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("5_14n6k")
+
+[node name="SpeedControl" type="Control" parent="MenuControl/MenuControl/MenuPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_right = 200.0
+offset_bottom = 145.0
+grow_horizontal = 2
+metadata/_edit_group_ = true
+
+[node name="LabelSpeedControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/SpeedControl"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 145.0
+
+[node name="SpeedMenuLabel" type="Label" parent="MenuControl/MenuControl/MenuPanel/SpeedControl/LabelSpeedControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -27.5
+offset_right = 48.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5e13b")
+text = "Speed:"
+
+[node name="OptionSpeedControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/SpeedControl"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 145.0
+grow_horizontal = 0
+
+[node name="SpeedMenuOptionButton" type="OptionButton" parent="MenuControl/MenuControl/MenuPanel/SpeedControl/OptionSpeedControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -31.5
+offset_right = 91.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_lx50x")
+theme_override_styles/focus = ExtResource("4_14n6k")
+alignment = 1
+
+[node name="FieldSelectionControl" type="Control" parent="MenuControl/MenuControl/MenuPanel"]
+anchors_preset = 0
+offset_top = 144.0
+offset_right = 400.0
+offset_bottom = 360.0
+metadata/_edit_group_ = true
+
+[node name="FieldSelectionTextControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/FieldSelectionControl"]
+anchors_preset = 0
+offset_right = 400.0
+offset_bottom = 80.0
+
+[node name="FieldSelectionLabel" type="Label" parent="MenuControl/MenuControl/MenuPanel/FieldSelectionControl/FieldSelectionTextControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.5
+offset_top = -27.5
+offset_right = 187.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5e13b")
+text = "Choose the playing field:"
+
+[node name="FieldSelectionButtonControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/FieldSelectionControl"]
+anchors_preset = 0
+offset_top = 80.0
+offset_right = 400.0
+offset_bottom = 216.0
+
+[node name="TextureRectControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/FieldSelectionControl/FieldSelectionButtonControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -68.0
+offset_right = 80.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuControl/MenuControl/MenuPanel/FieldSelectionControl/FieldSelectionButtonControl/TextureRectControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -39.0
+offset_right = 40.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonLeftControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/FieldSelectionControl/FieldSelectionButtonControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -68.0
+offset_right = 120.0
+offset_bottom = 68.0
+grow_vertical = 2
+
+[node name="ButtonLeft" type="Button" parent="MenuControl/MenuControl/MenuPanel/FieldSelectionControl/FieldSelectionButtonControl/ButtonLeftControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -27.5
+offset_right = 10.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_gc1bt")
+theme_override_styles/focus = ExtResource("4_14n6k")
+text = "<<<"
+
+[node name="ButtonRightControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/FieldSelectionControl/FieldSelectionButtonControl"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -68.0
+offset_bottom = 68.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ButtonRight" type="Button" parent="MenuControl/MenuControl/MenuPanel/FieldSelectionControl/FieldSelectionButtonControl/ButtonRightControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -27.5
+offset_right = 10.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_gc1bt")
+theme_override_styles/focus = ExtResource("4_14n6k")
+text = ">>>"
+
+[node name="MusicControl" type="Control" parent="MenuControl/MenuControl/MenuPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -40.0
+offset_right = 200.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="MusicLabelControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/MusicControl"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 145.0
+
+[node name="MusicLabel" type="Label" parent="MenuControl/MenuControl/MenuPanel/MusicControl/MusicLabelControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5e13b")
+text = "Music:"
+
+[node name="MusicCheckControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/MusicControl"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 145.0
+grow_horizontal = 0
+
+[node name="MusicToggleCheckButton" type="CheckButton" parent="MenuControl/MenuControl/MenuPanel/MusicControl/MusicCheckControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -68.0
+offset_right = 52.0
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_styles/focus = ExtResource("4_14n6k")
+
+[node name="SoundControl" type="Control" parent="MenuControl/MenuControl/MenuPanel"]
+anchors_preset = 0
+offset_top = 504.0
+offset_right = 400.0
+offset_bottom = 804.0
+metadata/_edit_group_ = true
+
+[node name="SoundLabelControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/SoundControl"]
+anchors_preset = 0
+offset_right = 400.0
+offset_bottom = 64.0
+
+[node name="SoundVolumeLabel" type="Label" parent="MenuControl/MenuControl/MenuPanel/SoundControl/SoundLabelControl"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -115.0
+offset_right = 115.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme = ExtResource("2_5e13b")
+text = "Sound volume:"
+
+[node name="SoundVolumeControl" type="Control" parent="MenuControl/MenuControl/MenuPanel/SoundControl"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SoundVolumeHSlider" type="HSlider" parent="MenuControl/MenuControl/MenuPanel/SoundControl/SoundVolumeControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -108.0
+offset_right = 8.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+max_value = 5.0
+step = 0.05
+editable = false
+
+[node name="ButtonClose" type="Button" parent="MenuControl/MenuControl/MenuPanel/SoundControl/SoundVolumeControl"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 80.0
+offset_right = 230.0
+offset_bottom = 135.0
+theme = ExtResource("3_gc1bt")
+theme_override_styles/focus = ExtResource("4_14n6k")
+text = "Close"

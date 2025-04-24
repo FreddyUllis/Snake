@@ -1,0 +1,47 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c2nedfs4pr1x"]
+
+[ext_resource type="FontFile" uid="uid://cf8x2m6psvev5" path="res://HUD/Art/Fonts/Handjet-Regular.ttf" id="1_lvpkp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvpkp"]
+bg_color = Color(0.262745, 0.466667, 0.203922, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upix1"]
+bg_color = Color(0.262748, 0.46861, 0.204567, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee1i7"]
+bg_color = Color(0.22205, 0.404868, 0.171559, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00e2f"]
+bg_color = Color(0.223529, 0.403922, 0.172549, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[resource]
+Button/font_sizes/font_size = 48
+Button/fonts/font = ExtResource("1_lvpkp")
+Button/styles/disabled = SubResource("StyleBoxFlat_lvpkp")
+Button/styles/hover = SubResource("StyleBoxFlat_upix1")
+Button/styles/normal = SubResource("StyleBoxFlat_ee1i7")
+Button/styles/pressed = SubResource("StyleBoxFlat_00e2f")

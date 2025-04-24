@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://do57dxkcuwplo"]
+
+[ext_resource type="Script" uid="uid://k0dowen82rwo" path="res://SnakeHead/Scripts/snake_head.gd" id="1_d8m85"]
+[ext_resource type="Texture2D" uid="uid://clmmsibogophx" path="res://SnakeHead/Art/Images/sprite_snake_head.png" id="2_yrbbs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yrbbs"]
+radius = 20.025
+
+[node name="SnakeHead" type="Area2D"]
+script = ExtResource("1_d8m85")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yrbbs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yrbbs")

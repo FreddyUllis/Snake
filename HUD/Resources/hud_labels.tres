@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://crdnqlcnh2hid"]
 
-[ext_resource type="FontFile" uid="uid://cf8x2m6psvev5" path="res://HUD/Art/Fonts/Handjet-Regular.ttf" id="1_1jli8"]
+[ext_resource type="FontFile" uid="uid://cs1lqew0cbmj3" path="res://HUD/Art/Fonts/Handjet-Regular.ttf" id="1_1jli8"]
 
 [resource]
 default_font = ExtResource("1_1jli8")

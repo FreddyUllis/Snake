@@ -7,7 +7,6 @@ var constants_collection: Node = preload("res://Other/Scripts/constants_collecti
 @onready var sound_volume_h_slider: HSlider = get_node(constants_path_scene.SOUND_VOLUME_H_SLIDER)
 @onready var speed_menu_option_button: OptionButton = get_node(constants_path_scene.SPEED_MENU_OPTION_BUTTON)
 @onready var main: Node2D = get_node(constants_path_scene.MAIN)
-@onready var background: Sprite2D = get_parent().get_node(constants_path_scene.BACKGROUND)
 
 func _ready() -> void:
 	
@@ -52,8 +51,6 @@ func _apply_speed() -> void:
 	main.move_timer.wait_time = timeout
 
 func _apply_music() -> void:
-	var volume_db: float = linear_to_db(Settings.get_sound_volume())
-	
 	if Settings.is_music_enabled():
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), false)
 	else:
@@ -64,10 +61,9 @@ func _apply_sound_volume() -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), volume_db)
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Sounds"), volume_db)
 
-
-func make_or_not_it_visible(is_visible: bool) -> void:
-	visible = is_visible
-	make_disabled_or_enabled(is_visible)
+func make_or_not_it_visible(is_visible_flag: bool) -> void:
+	visible = is_visible_flag
+	make_disabled_or_enabled(is_visible_flag)
 
 func make_disabled_or_enabled(is_disabled: bool) -> void:
 	music_toggle_check_button.disabled = not is_disabled

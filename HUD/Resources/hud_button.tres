@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://c2nedfs4pr1x"]
 
-[ext_resource type="FontFile" uid="uid://cf8x2m6psvev5" path="res://HUD/Art/Fonts/Handjet-Regular.ttf" id="1_lvpkp"]
+[ext_resource type="FontFile" uid="uid://cs1lqew0cbmj3" path="res://HUD/Art/Fonts/Handjet-Regular.ttf" id="1_lvpkp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvpkp"]
 bg_color = Color(0.262745, 0.466667, 0.203922, 1)

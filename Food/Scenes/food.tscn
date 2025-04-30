@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://5w6qf408b3ln"]
 
-[ext_resource type="Texture2D" uid="uid://cdjl6bot1vwwl" path="res://Food/Art/Images/sprite_food.png" id="1_6v55c"]
-[ext_resource type="Script" uid="uid://cy1ythbh7rau2" path="res://Food/Scripts/food.gd" id="1_mtyb0"]
+[ext_resource type="Texture2D" uid="uid://b1uhipbqe42b8" path="res://Food/Art/Images/sprite_food.png" id="1_6v55c"]
+[ext_resource type="Script" uid="uid://dvw68e5duixxi" path="res://Food/Scripts/food.gd" id="1_mtyb0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mtyb0"]
 radius = 20.2237

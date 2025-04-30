@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://m52umiw60wll" path="res://HUD/Scripts/text_game_control.gd" id="6_dmgiy"]
 [ext_resource type="Theme" uid="uid://b13upl17wixou" path="res://HUD/Resources/hud_labels_v2.tres" id="6_muoup"]
 [ext_resource type="Script" uid="uid://cx77autj0b5o1" path="res://HUD/Scripts/menu_control.gd" id="8_ekr6q"]
-[ext_resource type="FontFile" uid="uid://cf8x2m6psvev5" path="res://HUD/Art/Fonts/Handjet-Regular.ttf" id="8_lx50x"]
+[ext_resource type="FontFile" uid="uid://cs1lqew0cbmj3" path="res://HUD/Art/Fonts/Handjet-Regular.ttf" id="8_lx50x"]
 
 [sub_resource type="Theme" id="Theme_lx50x"]
 default_font = ExtResource("8_lx50x")

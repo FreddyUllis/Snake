@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1hy2v5710h0f"]
 
-[ext_resource type="Texture2D" uid="uid://dbg68lcu8l0sd" path="res://SnakeSegment/Art/Images/sprite_snake_body.png" id="1_ndd2o"]
+[ext_resource type="Texture2D" uid="uid://7pw5j2b8fbm" path="res://SnakeSegment/Art/Images/sprite_snake_body.png" id="1_ndd2o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p8qmo"]
 radius = 19.105

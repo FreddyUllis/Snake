@@ -5,7 +5,10 @@
 .import/
 export.cfg
 .DS_Store
+DS_Store
 .import
+/import/
+import
 .uid
 .tmp
 export_credentials.cfg

@@ -37,6 +37,7 @@ var _bg_idx: int
 var _tex_keys: Array = constants_collection.TEXTURE_RECT_IMG_MENU.keys()
 var _bg_keys: Array = constants_collection.BACKGROUND.keys()
 
+
 func _ready() -> void:
 	hud_button_pause.visible = false
 	hud_button_pause.disabled = true
@@ -60,7 +61,6 @@ func _ready() -> void:
 	hud_button_exit.pressed.connect(_on_exit_button_pressed)
 	hud_button_menu.pressed.connect(_on_menu_button_pressed)
 	hud_menu_button_close.pressed.connect(_on_menu_close_button_pressed)
-
 	
 	move_timer.timeout.connect(_on_timer_timeout)
 	move_timer.stop()

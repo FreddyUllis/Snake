@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Snake"
+config/description="The classic snake game."
+config/version="1.01"
 run/main_scene="uid://dqhmwhnaupbtn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="uid://duqd224y3v75o"
+config/icon="uid://duqd224y3v75o"
+config/macos_native_icon="res://Icon/icon.icns"
+config/windows_native_icon="res://Icon/icon256.ico"
+boot_splash/minimum_display_time=5
+config/export_release=true
 
 [audio]
 
@@ -27,6 +34,7 @@ Settings="*res://Other/Scripts/settings.gd"
 
 window/size/viewport_width=1200
 window/size/viewport_height=800
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor_plugins]

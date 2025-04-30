@@ -45,7 +45,7 @@ Classic Snake game built with Godot Engine 4.4.
 | S / ↓      | Move Down        |
 | A / ←      | Move Left        |
 | D / →      | Move Right       |
-| Space      | Pause / Resume   |
+| P          | Pause / Resume   |
 
 ## Configuration & Settings
 Global settings are exposed via the `Settings` autoload script (`Other/Scripts/settings.gd`):
@@ -138,7 +138,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 | S / ↓        | Вниз                |
 | A / ←        | Влево               |
 | D / →        | Вправо              |
-| Space        | Пауза / Возобновить |
+| P            | Пауза / Возобновить |
 
 ## Конфигурация и настройки
 Глобальные параметры доступны через автозагрузку `Settings` (`Other/Scripts/settings.gd`):

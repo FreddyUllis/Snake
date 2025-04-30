@@ -104,6 +104,7 @@ func _apply_settings() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
+		game_music_play_or_stop()
 		toggle_pause()
 
 func toggle_pause() -> void:
@@ -127,15 +128,17 @@ func _on_start_button_pressed() -> void:
 	if not is_game_active:
 		start_game()
 
-func _on_pause_button_pressed() -> void:
-	button_click_sound.play()
-	
+func game_music_play_or_stop() -> void:
 	if main_game_music.playing:
 		save_music_game_position = main_game_music.get_playback_position()
 		main_game_music.stop()
 	else:
 		main_game_music.play(save_music_game_position)
-		
+
+func _on_pause_button_pressed() -> void:
+	button_click_sound.play()
+	game_music_play_or_stop()
+	
 	if is_game_active:
 		toggle_pause()
 

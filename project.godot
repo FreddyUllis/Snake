@@ -39,7 +39,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/FolderCreator/Meta/plugin.cfg", "res://addons/create_comment/Meta/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

@@ -87,7 +87,7 @@ Adjust in the **Project Settings** under **Autoload → Settings** or directly i
 Please follow Godot style conventions and include typed annotations where appropriate.
 
 ## License
-This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 -----------------
 
@@ -180,4 +180,4 @@ This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for
 Следуйте стилю Godot и используйте строгую типизацию там, где это уместно.
 
 ## Лицензия
-Этот проект распространяется на условиях лицензии MIT. Подробнее см. [LICENSE.md](LICENSE.md).
+Этот проект распространяется на условиях лицензии MIT. Подробнее см. [LICENSE](LICENSE).

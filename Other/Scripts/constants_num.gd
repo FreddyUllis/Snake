@@ -1,4 +1,5 @@
 extends Node
+class_name SnakeConstantsNum
 
 const CELL_SIZE: int = 40
 const GAME_OVER_TIMER: float = 3.0

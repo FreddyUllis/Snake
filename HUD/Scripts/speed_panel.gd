@@ -1,6 +1,6 @@
 extends Panel
 
-var constants_path_scene: Node = preload("res://Other/Scripts/constants_path_scene.gd").new()
+const constants_path_scene := preload("res://Other/Scripts/constants_path_scene.gd")
 
 @onready var speed_name_label: Label = get_node(constants_path_scene.SPEED_NAME_LABEL)
 

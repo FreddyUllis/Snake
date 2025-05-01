@@ -1,6 +1,6 @@
 extends Area2D
 
-var constants_num: Node = preload("res://Other/Scripts/constants_num.gd").new()
+const constants_num := preload("res://Other/Scripts/constants_num.gd")
 
 func move_random(grid_size: Vector2i, cell_size: int, snake_body: Array) -> void:
 	var attempts: int = 0

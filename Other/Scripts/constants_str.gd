@@ -1,4 +1,5 @@
 extends Node
+class_name SnakeConstantsString
 
 const HUD_BUTTON_PAUSE_RESUME: String = "Resume"
 const HUD_BUTTON_PAUSE_PAUSE: String = "Pause"

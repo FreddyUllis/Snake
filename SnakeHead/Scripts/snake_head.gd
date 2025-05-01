@@ -1,11 +1,11 @@
 extends Area2D
 
-var constants_num: Node = preload("res://Other/Scripts/constants_num.gd").new()
+const constants_num := preload("res://Other/Scripts/constants_num.gd")
 var body_scene: PackedScene = preload("res://SnakeSegment/Scenes/snake_body.tscn")
 
 var direction: Vector2 = Vector2.RIGHT
 var next_direction: Vector2 = Vector2.RIGHT
-var body: Array = []
+var body := []
 var grid_size: Vector2i = Vector2i(
 		constants_num.FOOD_VECTOR,
 		constants_num.FOOD_VECTOR
@@ -15,7 +15,7 @@ var grid_size: Vector2i = Vector2i(
 func _init_snake() -> void:
 	_delete_body_snake()
 	
-	var head: Dictionary = {
+	var head := {
 		"position": position,
 		"node": self
 	}

@@ -1,7 +1,7 @@
 extends Control
 
-var constants_path_scene: Node = preload("res://Other/Scripts/constants_path_scene.gd").new()
-var constants_collection: Node = preload("res://Other/Scripts/constants_collection.gd").new()
+const constants_path_scene := preload("res://Other/Scripts/constants_path_scene.gd")
+const constants_collection := preload("res://Other/Scripts/constants_collection.gd")
 
 @onready var music_toggle_check_button: CheckButton = get_node(constants_path_scene.MUSIC_TOGGLE_CHECK_BUTTON)
 @onready var sound_volume_h_slider: HSlider = get_node(constants_path_scene.SOUND_VOLUME_H_SLIDER)

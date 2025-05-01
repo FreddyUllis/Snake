@@ -1,9 +1,9 @@
 extends Node2D
 
-var constants_path_scene: Node = preload("res://Other/Scripts/constants_path_scene.gd").new()
-var constants_num: Node = preload("res://Other/Scripts/constants_num.gd").new()
-var constants_str: Node = preload("res://Other/Scripts/constants_str.gd").new()
-var constants_collection: Node = preload("res://Other/Scripts/constants_collection.gd").new()
+const constants_path_scene := preload("res://Other/Scripts/constants_path_scene.gd")
+const constants_num := preload("res://Other/Scripts/constants_num.gd")
+const constants_str := preload("res://Other/Scripts/constants_str.gd")
+const constants_collection := preload("res://Other/Scripts/constants_collection.gd")
 
 @onready var snake: Area2D = get_node(constants_path_scene.SNAKE)
 @onready var food: Area2D = get_node(constants_path_scene.FOOD)
@@ -34,8 +34,8 @@ var save_music_game_position: float = 0.0
 
 var _tex_idx: int
 var _bg_idx: int
-var _tex_keys: Array = constants_collection.TEXTURE_RECT_IMG_MENU.keys()
-var _bg_keys: Array = constants_collection.BACKGROUND.keys()
+var _tex_keys := constants_collection.TEXTURE_RECT_IMG_MENU.keys()
+var _bg_keys := constants_collection.BACKGROUND.keys()
 
 
 func _ready() -> void:

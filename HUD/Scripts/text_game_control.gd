@@ -1,7 +1,7 @@
 extends Control
 
-var constants_path_scene: Node = preload("res://Other/Scripts/constants_path_scene.gd").new()
-var constants_path_str: Node = preload("res://Other/Scripts/constants_str.gd").new()
+const constants_path_scene := preload("res://Other/Scripts/constants_path_scene.gd")
+const constants_path_str := preload("res://Other/Scripts/constants_str.gd")
 
 @onready var parent_panel: Panel = get_parent()
 @onready var text_game_label: Label = get_node(constants_path_scene.TEXT_GAME_LABEL)

@@ -1,4 +1,5 @@
 extends Node
+class_name SnakeConstantsPathScene
 
 const HUD_LABEL_SCORE: String = "HUD/ButtonAndLabelControl/ButtonAndLabelPanel/ScorePanel/NumScoreControl/NumScoreLabel"
 const HUD_LABEL_TEXT_PRESS_START: String = "HUD/GameControl/GamePanel/TextGameControl"

@@ -1,6 +1,8 @@
 # Snake
 
-Classic Snake game built with Godot Engine 4.4.
+[![Godot 4.x](https://img.shields.io/badge/Godot-4.x-blue.svg)](https://godotengine.org/)  
+
+Classic Snake game built with Godot Engine 4.x.
 
 ## Table of Contents
 1. [Features](#features)
